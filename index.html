@@ -9,40 +9,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Best Testing Website">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
 <link rel='stylesheet' id='sparkling-style-css'  href='css/main.css' type='text/css' media='all' />
 </head>
 
 <body>
 <script>
-$.confirm({
-    type: 'green',
-    closeIcon: true,
-    boxWidth: '30%',
-    autoClose: 'cancel|8000',
-    theme: 'modern',
-    useBootstrap: false,
-    typeAnimated: true,
-    title: 'Heyyy you!',
-
-    content: 'Hey le site xxxvidsxxx est trop bien. Viens dessus stp please!',
-    buttons: {
-      somethingElse: {
-          text: 'Confirmed',
-          btnClass: 'btn-blue',
-          keys: ['enter', 'shift'],
-          action: function(){
-            location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-          }
-      },
-        cancel: function () {
-          //  $.alert('Canceled!');
-        }
-
-    }
+$(document).ready(function() {
+  setTimeout(function () {
+    $("#element_to_pop_up").bPopup();
+  }, 3000);
 });
+// Semicolon (;) to ensure closing of earlier scripting
+    // Encapsulation
+    // $ is assigned to jQuery
+    ;(function($) {
 
+         // DOM Ready
+        $(function() {
+
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('#my-button').bind('click', function(e) {
+
+                // Prevents the default action to be triggered.
+                e.preventDefault();
+
+
+
+                // Triggering bPopup when click event is fired
+                $('#element_to_pop_up').bPopup();
+
+            });
+
+        });
+
+    })(jQuery);
 </script>
 <!-- Element to pop up -->
 <div id="element_to_pop_up">
