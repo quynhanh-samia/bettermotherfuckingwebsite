@@ -8,12 +8,47 @@
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Best Testing Website">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 <link rel='stylesheet' id='sparkling-style-css'  href='css/main.css' type='text/css' media='all' />
 </head>
 
 <body>
+<script>
+$.confirm({
+    type: 'green',
+    closeIcon: true,
+    boxWidth: '30%',
+    autoClose: 'cancel|8000',
+    theme: 'modern',
+    useBootstrap: false,
+    typeAnimated: true,
+    title: 'Heyyy you!',
 
+    content: 'Hey le site xxxvidsxxx est trop bien. Viens dessus stp please!',
+    buttons: {
+      somethingElse: {
+          text: 'Confirmed',
+          btnClass: 'btn-blue',
+          keys: ['enter', 'shift'],
+          action: function(){
+            location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+          }
+      },
+        cancel: function () {
+          //  $.alert('Canceled!');
+        }
+
+    }
+});
+
+</script>
+<!-- Element to pop up -->
+<div id="element_to_pop_up">
+    <a class="b-close">x</a>
+  <a href="https://>www.youtube.com/watch?v=dQw4w9WgXcQ">  Hey le site xxxvidsxxx est trop bien. Viens dessus stp please</a>
+</div>
 
 	<h1>This is the <i>Test</i> of  Quynh Anh and Samia's Website.</h1>
 
